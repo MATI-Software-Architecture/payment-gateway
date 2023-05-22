@@ -1,0 +1,8 @@
+{
+  "name": "payment-gateway",
+  "version": "1.0.0",
+  "description": "Payment Gateway to the final project",
+  "dependencies": {
+    "crypto-js": "^4.1.1"
+  }
+}

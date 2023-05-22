@@ -1,0 +1,19 @@
+service: payment-gateway
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  stage: dev
+  region: us-east-2
+
+functions:
+# payment gateway
+  payment-gateway:
+    handler: src/payment.gateway
+    memorySize: 128
+    description: Payment gateway
+    events:
+      - httpApi:
+          path: /
+          method: post
